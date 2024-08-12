@@ -42,3 +42,71 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+@font-face {
+  font-family: font1;
+  src: url(./assets/fonts/font1.woff2);
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  /* padding: 15px 20px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  background-color: hsl(222, 19%, 18%);
+  font-family: 'font1', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+  margin: 0;
+}
+
+.left,
+.right {
+  display: flex;
+  gap: 50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.left div,
+.right div {
+  padding: 0 10px;
+}
+
+.right {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+.orangebutton {
+  background-color: hsl(20, 100%, 50%);
+  color: hsl(0, 0%, 0%);
+  margin-top: -15px;
+  margin-bottom: -15px;
+  margin-left: 0;
+  margin-right: 0;
+  display: grid;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.orangebutton:hover {
+  background-color: hsl(180, 100%, 90%);
+}
