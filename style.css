@@ -48,6 +48,12 @@ h6 {
   src: url(./assets/fonts/font1.woff2);
 }
 
+
+@font-face {
+  font-family: font2;
+  src: url(./assets/fonts/font2.woff2);
+}
+
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -110,3 +116,21 @@ header {
 .orangebutton:hover {
   background-color: hsl(180, 100%, 90%);
 }
+
+.bg-gradient{
+  background: linear-gradient(180deg, #141E2A 24.36%, #264A4A 100%);
+}
+
+.marquee {
+  color: #fff;
+  font-family: font2;
+  font-size: 20rem;
+}
+
+.gradient-text,
+.hero-second-text {
+  color: #DCFE0B;
+  font-family: font1;
+
+}
+
