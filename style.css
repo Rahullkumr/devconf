@@ -117,20 +117,39 @@ header {
   background-color: hsl(180, 100%, 90%);
 }
 
-.bg-gradient{
+.bg-gradient {
   background: linear-gradient(180deg, #141E2A 24.36%, #264A4A 100%);
 }
 
 .marquee {
   color: #fff;
   font-family: font2;
-  font-size: 20rem;
+  font-size: 18rem;
+  font-weight: bold;
+  animation: scroll-left 15s linear infinite;
+}
+
+.marquee-wrapper {
+  padding-left: 2em;
+  margin-top: -2em;
+  padding-bottom: 2em;
+}
+
+
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0vw)
+  }
+  100% {
+      transform: translateX(-50%)
+  }
 }
 
 .gradient-text,
 .hero-second-text {
   color: #DCFE0B;
   font-family: font1;
+  line-height: 1.7em;
 
 }
 
