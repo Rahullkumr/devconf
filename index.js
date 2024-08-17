@@ -19,3 +19,21 @@ const carouselElements = document.querySelectorAll(".splide");
     // Mount the Splide instance
     splide.mount(window.splide.Extensions);
   });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const stickyClass = 'sticky';
+
+    const stickyOffset = header.offsetTop;
+
+    function handleScroll() {
+      if (window.scrollY > stickyOffset) {
+        header.classList.add(stickyClass);
+      } else {
+        header.classList.remove(stickyClass);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  });

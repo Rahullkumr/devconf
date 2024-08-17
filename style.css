@@ -1,13 +1,11 @@
 *,
 *::before,
 *::after {
+  margin: 0;
   box-sizing: border-box;
   -webkit-box-sizing: padding-box;
-  box-sizing: padding-box;
 }
-* {
-  margin: 0;
-}
+
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -60,10 +58,25 @@ header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 1rem 1.25rem; /* 15px 20px */
+  padding: 1rem 1.25rem; 
   background-color: hsl(222, 19%, 18%);
   font-family: 'font1', sans-serif;
   color: hsl(0, 0%, 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header.sticky {
+  background-color: hsla(223, 20%, 18%, 0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(40px);
+  z-index: 1000;
 }
 
 .wrapper {
@@ -147,7 +160,7 @@ header {
   font-family: font2;
   font-size: 17rem;
   font-weight: bold;
-  padding: -25px;
+  padding: 0px;
 }
 .splide .splide__track ul li img {
   width: 6.4rem;
