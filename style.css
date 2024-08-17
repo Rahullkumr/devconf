@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
 }
 * {
   margin: 0;
@@ -47,7 +49,6 @@ h6 {
   font-family: font1;
   src: url(./assets/fonts/font1.woff2);
 }
-
 
 @font-face {
   font-family: font2;
@@ -118,7 +119,7 @@ header {
 }
 
 .bg-gradient {
-  background: linear-gradient(180deg, #141E2A 24.36%, #264A4A 100%);
+  background: linear-gradient(180deg, #141e2a 24.36%, #264a4a 100%);
 }
 
 .marquee {
@@ -126,7 +127,6 @@ header {
   font-family: font2;
   font-size: 18rem;
   font-weight: bold;
-  animation: scroll-left 15s linear infinite;
 }
 
 .marquee-wrapper {
@@ -135,21 +135,59 @@ header {
   padding-bottom: 2em;
 }
 
+/* splide */
 
-@keyframes scroll-left {
-  0% {
-      transform: translateX(0vw)
-  }
-  100% {
-      transform: translateX(-50%)
-  }
+.splide {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splide .splide__track ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: font2;
+  font-size: 18rem;
+  font-weight: bold;
+}
+.splide .splide__track ul li img {
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 .gradient-text,
 .hero-second-text {
-  color: #DCFE0B;
+  color: #dcfe0b;
   font-family: font1;
   line-height: 1.7em;
-
 }
 
+#video {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.blue-grid {
+  background: (180deg, #274048 0%, #0c1619 104.06%);
+}
+
+.blue-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 1.406vw 1.406vw;
+}
