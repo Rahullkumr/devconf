@@ -211,7 +211,8 @@ header.sticky {
   height: 82.6vh; /* Full viewport height, adjust as needed */
 }
 
-.first-half, .second-half {
+.first-half,
+.second-half {
   height: 100%; /* Full height of the section */
 }
 
@@ -224,7 +225,7 @@ header.sticky {
   width: 57%;
   color: #fff;
   box-sizing: border-box;
-  background-color: hsl(193,39%,7%);
+  background-color: hsl(193, 39%, 7%);
   font-family: font1;
 }
 
@@ -247,13 +248,14 @@ header.sticky {
       to right,
       rgba(255, 255, 255, 0.1) 1px,
       transparent 1px
-  ),
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 1.406rem 1.406rem; /* 1.406vw, converted */
   z-index: 0; /* Ensure the grid is behind content */
 }
 
-.blue-grid h2, .blue-grid p {
+.blue-grid h2,
+.blue-grid p {
   position: relative; /* Ensure text is above the background grid */
   z-index: 1;
   margin: 0;
@@ -268,16 +270,16 @@ header.sticky {
   font-size: 1.1rem;
   position: relative;
   z-index: 2;
-
 }
 
-.second-half h2, .second-half p {
+.second-half h2,
+.second-half p {
   margin: 0 0 1.25rem; /* 20px */
-  background-color: hsl(193,39%,7%);
+  background-color: hsl(193, 39%, 7%);
 }
 
 .green-text {
-  color: #30FF89;
+  color: #30ff89;
   padding-top: 2rem;
   padding-left: 2rem;
   padding-bottom: 1rem;
@@ -291,7 +293,7 @@ header.sticky {
 }
 
 .grid-item {
-  background-color: hsl(193,39%,7%);
+  background-color: hsl(193, 39%, 7%);
   border-top: 1px solid #696969;
   padding: 2rem;
 }
@@ -321,12 +323,10 @@ header.sticky {
   line-height: 1.6;
 }
 
-
-
 .yellow-grid {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
+  background: linear-gradient(to right, #f1ffff 0%, #f1ffff 70%, #dcfe0b 100%);
   color: #333;
   box-sizing: border-box;
   overflow: hidden;
@@ -340,17 +340,12 @@ header.sticky {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image:
-      linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.1) 1px,
-          transparent 1px
-      ),
-      linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.1) 1px,
-          transparent 1px
-      );
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: calc(100% / 12) calc(100% / 7);
   z-index: 0;
 }
@@ -374,8 +369,6 @@ header.sticky {
   font-family: font2;
 }
 
-
-
 .description,
 .final {
   display: flex;
@@ -394,7 +387,7 @@ header.sticky {
 }
 
 .yellow-grid .panel {
-background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
+  background: linear-gradient(to right, #f1ffff 0%, #f1ffff 70%, #dcfe0b 100%);
 }
 
 .panel {
@@ -408,9 +401,8 @@ background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
+  background: linear-gradient(to right, #f1ffff 0%, #f1ffff 70%, #dcfe0b 100%);
 }
-
 
 .panel::before {
   content: '';
@@ -419,51 +411,52 @@ background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
   left: 0;
   width: 100%;
   height: 100%;
-  background-image:
-      linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.1) 1px,
-          transparent 1px
-      ),
-      linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.1) 1px,
-          transparent 1px
-      );
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: calc(100% / 12) calc(100% / 7);
   z-index: 0;
 }
 
-
 .panel:nth-child(2) {
   background-color: #dcfe0b;
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 1px, transparent 1px);
-  background-size: calc(100% / 12) calc(100% / 7);
 }
-
-
-
 
 .panel.attendes-block {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* Match the grid layout */
-  position: relative;
-  grid-auto-rows: min-content;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content; /* Automatically adjusts rows based on content */
 }
 
-
 .attendes {
-  display: contents;
+  grid-column: 3 / -1; /* Span all columns */
+  grid-row: 2 / auto; /* Start from the 2nd row */
 }
 
 .attendes .list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  grid-column: 3 / span 12 ;
-  grid-row: auto / span 1;
 }
 
+.speaker-name {
+  font-family: font2;
+  font-size: 2.5rem;
+  margin-left: 1em;
+}
+
+.speaker-desig {
+  font-family: font1;
+  font-size: 1.5rem;
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
 
