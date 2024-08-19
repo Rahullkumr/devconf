@@ -209,12 +209,11 @@ header.sticky {
   display: grid;
   grid-template-columns: 42% 58%;
   width: 100%;
-   /* Full viewport height, adjust as needed */
+  /* Full viewport height, adjust as needed */
 }
 
 .first-half,
 .second-half {
-
 }
 
 .first-half {
@@ -264,7 +263,7 @@ header.sticky {
 }
 
 .code-btn-block {
-   align-self: center;
+  align-self: center;
 }
 
 .code-btn {
@@ -291,9 +290,9 @@ header.sticky {
   padding-left: 2rem;
   padding-bottom: 1rem;
   font-size: clamp(
-    0.5px, /* Minimum value */
-    1.667vw, /* Preferred value */
-    169.983px /* Maximum value */
+    0.5px,
+    /* Minimum value */ 1.667vw,
+    /* Preferred value */ 169.983px /* Maximum value */
   );
 }
 
@@ -318,21 +317,23 @@ header.sticky {
   padding-right: 3rem;
   padding-top: 1rem;
   font-size: clamp(
-    0.5px, /* Minimum value */
-    1.667vw, /* Preferred value */
-    169.983px /* Maximum value */
+    0.5px,
+    /* Minimum value */ 1.667vw,
+    /* Preferred value */ 169.983px /* Maximum value */
   );
 }
 
 .grid-item-p {
   font-size: max(
-        11px, /* Ensures font size is at least 11px */
-        clamp(
-          0.5px, /* Minimum value */
-          0.938vw, /* Preferred value based on viewport width */
-          89.991px /* Maximum value */
-        )
-      );
+    11px,
+    /* Ensures font size is at least 11px */
+      clamp(
+        0.5px,
+        /* Minimum value */ 0.938vw,
+        /* Preferred value based on viewport width */ 89.991px
+          /* Maximum value */
+      )
+  );
 }
 
 .spacer {
@@ -422,7 +423,11 @@ header.sticky {
   position: relative;
   height: 100vh;
   box-sizing: border-box;
-  font-size: clamp(0.5px, calc((6.771 * 1vw) - (17px * 0.06770999999999999)), calc(0.068 * 1140px));
+  font-size: clamp(
+    0.5px,
+    calc((6.771 * 1vw) - (17px * 0.06770999999999999)),
+    calc(0.068 * 1140px)
+  );
   color: #000;
   line-height: 0.9;
   font-family: font2;
@@ -502,12 +507,13 @@ header.sticky {
 .stack-left-margin {
   /* padding-left: 3rem; */
   margin-left: 2.96vw;
-  /* svg {
+  svg {
     bottom: 0;
     left: 0;
     position: absolute;
-
-  } */
+    right: 0;
+    top: 0;
+  }
 }
 
 .stack-left-text {
@@ -546,6 +552,72 @@ header.sticky {
 }
 .stack-right-job {
   font-family: font2;
-  font-size: clamp(0.5px, calc(3.333vw - 0.56661px), 37.62px)
+  font-size: clamp(0.5px, calc(3.333vw - 0.56661px), 37.62px);
+}
 
+.container-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'what what schedule'
+    'card-1 card-2 card-3'
+    '. . .';
+  background-color: hsl(193, 39%, 7%);
+  font-family: font2;
+  line-height: 0.9;
+}
+
+.what {
+  grid-area: what;
+  font-size: 7em;
+  padding: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #fff;
+  border-bottom: 1px solid #ffffff8b;
+}
+
+.schedule {
+  grid-area: schedule;
+  color: #000;
+  font-family: font1;
+  background-color: #dcfe0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.5px, 1.7em, 6rem);
+}
+
+.card-2 {
+  grid-area: card-2;
+  border-right: 1px solid #ffffff8b;
+  border-bottom: 1px solid #ffffff8b;
+  padding: 2rem;
+  padding-top: 4rem;
+  font-size: 2.8rem;
+  color: #30ff89;
+}
+
+.card-3 {
+  grid-area: card-3;
+  border-right: 1px solid #ffffff8b;
+  border-bottom: 1px solid #ffffff8b;
+  padding: 2rem;
+  padding-top: 4rem;
+  font-size: 2.8rem;
+  color: #30ff89;
+}
+
+.card-1 {
+  grid-area: card-1;
+  border-right: 1px solid #ffffff8b;
+  border-bottom: 1px solid #ffffff8b;
+  padding: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 9em;
+  font-size: 2.8rem;
+  color: #30ff89;
 }
