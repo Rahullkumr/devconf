@@ -460,3 +460,47 @@ header.sticky {
   margin-top: 0.5em;
 }
 
+.container-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.stack-left {
+  background-image: linear-gradient(rgba(20, 30, 42, 1), rgba(68, 152, 132, 1));
+  color: #dcfe0b;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+.stack-left-text {
+  font-family: font2;
+  font-size: 6em;
+  inset: 0;
+  text-align: left; /* Align text to the left if needed */
+  line-height: 0.9;
+}
+
+.site-dev {
+  padding: 2rem;
+  padding-top: 8em;
+  background-image: linear-gradient(0deg, #f50 -3.97%, #e1ffff 102.61%);
+}
+.stack-app {
+  background-color: #1f463f;
+  padding: 2rem;
+  padding-top: 8em;
+  color: #fff;
+}
+.stack-agencies {
+  padding: 2rem;
+  padding-top: 9em;
+  background-color: #cffffe;
+}
+
+.stack-right-num {
+  font-family: font1;
+  font-size: 1.5rem;
+}
+.stack-right-job {
+  font-family: font2;
+  font-size: 2.5rem;
+}
