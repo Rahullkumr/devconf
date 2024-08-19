@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devconf</title>
 
-    <!-- splide -->
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <!-- Splide -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
@@ -31,7 +38,6 @@
       content="Join Devconf, the conference designed for web agencies to stay ahead in the age of hyper-efficiency."
     />
     <meta property="og:image" content="./assets/images/og-image.png" />
-    <!-- Update with a real image URL -->
     <meta property="og:image:alt" content="Devconf conference banner" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
@@ -42,24 +48,22 @@
       content="Join Devconf to explore new business opportunities, challenge mental models, practice new skills, and meet collaborators."
     />
     <meta name="twitter:image" content="./assets/images/twitter-image.png" />
-    <!-- Update with a real image URL -->
   </head>
-
   <body>
     <header class="wrapper">
-      <div class="left">
+      <nav class="left">
         <div class="underline">ABOUT</div>
         <div class="underline">SPEAKERS</div>
         <div class="underline">AGENDA</div>
-      </div>
+      </nav>
       <div class="center"><b>DEV</b>STUDIO</div>
-      <div class="right">
+      <nav class="right">
         <div class="underline">LOCATION</div>
         <div class="underline">FAQS</div>
         <div class="orangebutton">
           <div>REGISTRATION</div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main class="bg-gradient">
@@ -155,15 +159,50 @@
               connections.
             </p>
           </div>
-          <div class="spacer"></div>
         </div>
       </div>
     </section>
+    <!-- <div class="spacer"></div> -->
 
-    <div class="yellow-grid">
-      <div class="yellow-content">
-        <h1>Spotlight Speakers</h1>
+    <div class="container-wrapper">
+      <div class="container yellow-grid">
+        <section class="panel">
+          <h1>Spotlight Speakers</h1>
+        </section>
+        <section class="panel attendes-block">
+          <div class="attendes">
+            <div class="list">
+              <img src="" height="126px" width="120px" />
+              <span>John Doe</span>
+              <span>Speaker</span>
+            </div>
+            <div class="list">
+              <img src="image1.jpg" height="126px" width="120px" />
+              <span>John Doe</span>
+              <span>Speaker</span>
+            </div>
+            <div class="list">
+              <img src="image1.jpg" height="126px" width="120px" />
+              <span>John Doe</span>
+              <span>Speaker</span>
+            </div>
+            <div class="list">
+              <img src="image1.jpg" height="126px" width="120px" />
+              <span>John Doe</span>
+              <span>Speaker</span>
+            </div>
+            <div class="list">
+              <img src="image1.jpg" height="126px" width="120px" />
+              <span>John Doe</span>
+              <span>Speaker</span>
+            </div>
+          </div>
+        </section>
       </div>
+
+      <!-- <div class="final">
+        <h1>thanks for<span>scrolling</span></h1>
+      </div> -->
     </div>
 
     <script defer src="index.js"></script>
