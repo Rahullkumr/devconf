@@ -1,9 +1,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
   box-sizing: border-box;
-  -webkit-box-sizing: padding-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -11,6 +11,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-size: 16px; /* Base size for rem calculations */
+  overflow-x: hidden;
 }
 body {
   line-height: 1.5;
@@ -58,7 +59,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 1rem 1.25rem; 
+  padding: 1rem 1.25rem;
   background-color: hsl(222, 19%, 18%);
   font-family: 'font1', sans-serif;
   color: hsl(0, 0%, 100%);
@@ -100,7 +101,7 @@ header.sticky {
 }
 
 .right {
-  display: grid;
+  display: flex;
   grid-auto-flow: column;
   justify-content: end;
 }
@@ -112,11 +113,15 @@ header.sticky {
 .orangebutton {
   background-color: hsl(20, 100%, 50%);
   color: hsl(0, 0%, 0%);
-  margin: -0.9375rem 0; /* -15px */
-  display: grid;
-  justify-self: end;
+  /* margin: -0.9375rem 0; -15px */
+  margin-top: -0.9375rem;
+  margin-bottom: -0.9375rem;
+  margin-right: 0;
+
+  display: flex;
+  /* justify-self: end; */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -133,7 +138,7 @@ header.sticky {
 .marquee {
   color: #fff;
   font-family: font2;
-  font-size: 18rem;
+  font-size: 21rem;
   font-weight: bold;
 }
 
@@ -158,13 +163,14 @@ header.sticky {
   justify-content: center;
   color: #fff;
   font-family: font2;
-  font-size: 17rem;
+  font-size: 14rem;
   font-weight: bold;
-  padding: 0px;
+  padding: 30px;
+  padding-top: 70px;
 }
 .splide .splide__track ul li img {
-  width: 6.4rem;
-  height: 6.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
 }
 
 .gradient-text,
@@ -300,7 +306,7 @@ header.sticky {
 }
 
 .spacer {
-  padding: 100px;
+  padding: 35px;
 }
 
 .border-right {
@@ -345,7 +351,7 @@ header.sticky {
           rgba(0, 0, 0, 0.1) 1px,
           transparent 1px
       );
-  background-size: calc(100% / 12) calc(100% / 8);
+  background-size: calc(100% / 12) calc(100% / 7);
   z-index: 0;
 }
 
@@ -367,3 +373,97 @@ header.sticky {
   color: #000;
   font-family: font2;
 }
+
+
+
+.description,
+.final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.container {
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.yellow-grid .panel {
+background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
+}
+
+.panel {
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 3rem;
+  color: #000;
+  font-family: font2;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #F1FFFF 0%, #F1FFFF 70%, #dcfe0b 100%);
+}
+
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+      linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.1) 1px,
+          transparent 1px
+      ),
+      linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1) 1px,
+          transparent 1px
+      );
+  background-size: calc(100% / 12) calc(100% / 7);
+  z-index: 0;
+}
+
+
+.panel:nth-child(2) {
+  background-color: #dcfe0b;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 7);
+}
+
+
+
+
+.panel.attendes-block {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Match the grid layout */
+  position: relative;
+  grid-auto-rows: min-content;
+}
+
+
+.attendes {
+  display: contents;
+}
+
+.attendes .list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-column: 3 / span 12 ;
+  grid-row: auto / span 1;
+}
+
+
