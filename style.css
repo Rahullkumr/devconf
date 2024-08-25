@@ -421,7 +421,7 @@ header.sticky {
 
 .panel {
   position: relative;
-  height: 100vh;
+
   box-sizing: border-box;
   font-size: clamp(
     0.5px,
@@ -463,36 +463,87 @@ header.sticky {
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 10);
 }
 
-.panel.attendes-block {
+
+
+
+
+
+
+
+.grid-img {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: min-content; /* Automatically adjusts rows based on content */
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+  grid-template-rows: repeat(7, 1fr); /* 7 rows, adjust height as needed */
 }
+
+.item {
+  background-size: cover;
+  background-position: center;
+  width: 10%;
+  height: 100%;
+}
+
+/* Positioning images using grid-area */
+.image1 {
+  grid-area: 2 / 3 / 2 / 13;
+  background-image: url('https://static.wixstatic.com/media/0d6674_9923ea042af341be99718c43ccd69121~mv2.jpg/v1/fill/w_314,h_314,fp_0.53_0.45,q_80,usm_0.66_1.00_0.01,enc_auto/Yaniv%20EH.jpg');
+
+}
+.image2 {
+  grid-area: 3 / 3 / 3 / 13;
+  background-image: url('https://static.wixstatic.com/media/0d6674_18ba8f25292641d1ab3a8bfdc0e3750c~mv2.jpg/v1/fill/w_314,h_314,fp_0.44_0.47,q_80,usm_0.66_1.00_0.01,enc_auto/yoavFinal.jpg');
+}
+.image3 {
+  grid-area: 4 / 3 / 4 / 13;
+  background-image: url('https://static.wixstatic.com/media/0d6674_d4adcf3bca9a4b6d9b21b996aa2f0813~mv2.jpg/v1/fill/w_314,h_314,fp_0.43_0.45,q_80,usm_0.66_1.00_0.01,enc_auto/tuvitFinal.jpg');
+}
+.image4 {
+  grid-area: 5 / 3 / 5 / 13;
+  background-image: url('https://static.wixstatic.com/media/f5f203_e8f2b7b1acb8404d8616e606fd4e6909~mv2.jpg/v1/fill/w_238,h_238,fp_0.39_0.46,q_80,usm_0.66_1.00_0.01,enc_auto/varun.jpg');
+}
+.image5 {
+  grid-area: 6 / 3 / 6 / 13;
+  background-image: url('https://static.wixstatic.com/media/0d6674_14ff3fa6a6454156a7a1ec5891e72cfe~mv2.jpg/v1/fill/w_238,h_238,fp_0.48_0.54,q_80,usm_0.66_1.00_0.01,enc_auto/Anchit.jpg');
+}
+
 
 .attendes {
-  grid-column: 3 / -1; /* Span all columns */
-  grid-row: 2 / auto; /* Start from the 2nd row */
+  /* grid-column: 4 / -1; Span all columns */
+  /* grid-row: 2 / auto; Start from the 2nd row */
 }
 
-.attendes .list {
-  display: flex;
-  align-items: center;
+.list {
+  grid-area: 2 / 4 / 1 / 13;
+  margin-left: 2.3em;
+  margin-top: 0.7rem;
+
 }
 
 .speaker-name {
   font-family: font2;
   font-size: 2.5rem;
-  margin-left: 1em;
 }
 
 .speaker-desig {
   font-family: font1;
   font-size: 1.5rem;
-  margin-left: 1em;
-  margin-top: 0.5em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container-stack {
   display: grid;
@@ -563,8 +614,7 @@ header.sticky {
   grid-auto-flow: row;
   grid-template-areas:
     'what what schedule'
-    'card-1 card-2 card-3'
-    '. . .';
+    'card-1 card-2 card-3';
   background-color: hsl(193, 39%, 7%);
   font-family: font2;
   line-height: 0.9;
@@ -584,40 +634,187 @@ header.sticky {
   grid-area: schedule;
   color: #000;
   font-family: font1;
+
   background-color: #dcfe0b;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(0.5px, 1.7em, 6rem);
+  line-height: 0.9;
+}
+
+.card-ctrl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6em;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-left {
+  color: #fff;
+  justify-content: left;
+  font-size: 1.5rem;
+}
+
+.left-top {
+  justify-content: right;
+}
+
+
+.card-1 {
+  grid-area: card-1;
+  border-right: 1px solid #ffffff8b;
+  border-bottom: 1px solid #ffffff8b;
+  font-size: 2.8rem;
+  color: #30ff89;
+  padding: 1em;
 }
 
 .card-2 {
   grid-area: card-2;
   border-right: 1px solid #ffffff8b;
   border-bottom: 1px solid #ffffff8b;
-  padding: 2rem;
-  padding-top: 4rem;
   font-size: 2.8rem;
   color: #30ff89;
+  padding: 1em;
+
 }
 
 .card-3 {
   grid-area: card-3;
   border-right: 1px solid #ffffff8b;
   border-bottom: 1px solid #ffffff8b;
-  padding: 2rem;
-  padding-top: 4rem;
   font-size: 2.8rem;
   color: #30ff89;
+  padding: 1em;
 }
 
-.card-1 {
-  grid-area: card-1;
-  border-right: 1px solid #ffffff8b;
-  border-bottom: 1px solid #ffffff8b;
-  padding: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 9em;
-  font-size: 2.8rem;
-  color: #30ff89;
+
+
+
+
+
+
+
+
+.bluegradient {
+  position: relative;
+  height: 80vh;
+  box-sizing: border-box;
+  font-size: clamp(
+    0.5px,
+    calc((6.771 * 1vw) - (17px * 0.06770999999999999)),
+    calc(0.068 * 1140px)
+  );
+  color: #000;
+  line-height: 0.9;
+  font-family: font2;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, hsl(180, 100%, 88%) 0%, #f1ffff 70%);
 }
+
+.bluegradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 5);
+  z-index: 0;
+}
+
+.see-you-there {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: 'see date greengrid', 'access location register';
+}
+
+.see {
+  background-image: linear-gradient(180deg, #deff00 36.47%, #fff 119.63%),
+    linear-gradient(180deg, #153216 0%, #30ff89 100%);
+  padding: 10px;
+}
+
+.date {
+  color: #deff00;
+  background-color: hsl(169, 39%, 20%);
+}
+
+.green-grid {
+  color: #deff00;
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: clamp(
+    0.5px,
+    calc((6.771 * 1vw) - (17px * 0.06770999999999999)),
+    calc(0.068 * 1140px)
+  );
+  color: #000;
+  line-height: 0.9;
+  font-family: font2;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(169, 39%, 20%);
+}
+
+.green-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 7);
+  z-index: 0;
+}
+
+.access {
+  background-color: hsl(169, 39%, 20%);
+  color: #deff00;
+}
+.location {
+  background-color: hsl(169, 39%, 20%);
+  color: #deff00;
+}
+.register {
+  background-color: #ff5600;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+

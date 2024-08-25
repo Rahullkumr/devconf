@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Smooth scroll and animation
 const lenis = new Lenis()
 function raf(time) {
-  lenis.raf(time * 0.9)
+  lenis.raf(time * 1.0)
   requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
