@@ -895,9 +895,10 @@ header.sticky {
   }
 }
 
-.container-video {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
+.container-video {
+  display: grid;
+  grid-template-columns: 0.632fr 1.367fr;
+  grid-template-rows: 0.55fr 2fr 0.55fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -907,11 +908,19 @@ header.sticky {
   background-color: #0B1619;
 }
 
-.video-top { grid-area: video-top; border-left: #3B4547 solid 1px; }
+.video-top {
+  grid-area: video-top;
+  border-left: #3B4547 solid 1px;
+}
 
-.video { grid-area: video; }
+.video {
+  grid-area: video;
+}
 
-.video-bottom { grid-area: video-bottom; border-left: #3B4547 solid 1px;}
+.video-bottom {
+  grid-area: video-bottom;
+  border-left: #3B4547 solid 1px;
+}
 
 .video-left-text {
   grid-area: video-left-text;
@@ -920,8 +929,8 @@ header.sticky {
   color: #fff;
   font-family: font1;
   padding: 2em;
-  font-size: 1.3rem;
-  position: relative; /* To position .check absolutely */
+  font-size: 1.5rem;
+  position: relative;
 }
 
 .check {
