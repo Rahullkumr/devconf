@@ -872,3 +872,66 @@ header.sticky {
   font-family: font1;
   font-size: 1.5em;
 }
+
+.container-map {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "map fulladdress";
+}
+.map { grid-area: map; }
+
+.fulladdress {
+  grid-area: fulladdress;
+  padding: 3em;
+  span {
+    display: block;
+    font-family: font1;
+    color: #fff;
+    font-size: 13px;
+  }
+}
+
+.container-video {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". video-top video-top"
+    "video-left-text video video"
+    ". video-bottom video-bottom";
+  background-color: #0B1619;
+}
+
+.video-top { grid-area: video-top; border-left: #3B4547 solid 1px; }
+
+.video { grid-area: video; }
+
+.video-bottom { grid-area: video-bottom; border-left: #3B4547 solid 1px;}
+
+.video-left-text {
+  grid-area: video-left-text;
+  border-top: #3B4547 solid 1px;
+  border-bottom: #3B4547 solid 1px;
+  color: #fff;
+  font-family: font1;
+  padding: 2em;
+  font-size: 1.3rem;
+  position: relative; /* To position .check absolutely */
+}
+
+.check {
+  position: absolute;
+  bottom: 1.5em;
+  display: flex;
+}
+
+.span-orange {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  color: rgb(255, 64, 0);
+}
