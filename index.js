@@ -72,3 +72,21 @@ ScrollTrigger.create({
   scrub: 1,
   invalidateOnRefresh: true,
 })
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const firstSvg = document.getElementById("first-svg");
+  const secondSvg = document.getElementById("second-svg");
+
+  firstSvg.addEventListener("click", () => {
+      // Hide the first SVG and show the second SVG
+      firstSvg.style.display = "none";
+      secondSvg.style.display = "block";
+  });
+  secondSvg.addEventListener("click", () => {
+    // Hide the secong SVG and show the first SVG
+    secondSvg.style.display = "none";
+    firstSvg.style.display = "block";
+});
+});
+

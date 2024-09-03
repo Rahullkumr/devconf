@@ -935,7 +935,6 @@ header.sticky {
 
 .check {
   position: absolute;
-  bottom: 1.5em;
   display: flex;
 }
 
@@ -943,4 +942,66 @@ header.sticky {
   justify-content: flex-end;
   flex-wrap: wrap;
   color: rgb(255, 64, 0);
+}
+
+
+.faq-title {
+  padding-top: 1.5em;
+  padding-left: 1.3em;
+  padding-bottom: 1.5em;
+  color: #23474C;
+  font-family: font2;
+  font-size: 3em;
+}
+
+.space-y-4 {
+  background: linear-gradient(180deg, #F0FFFE 24.36%, #fff 100%);
+  line-height: 1.3;
+  font-size: 1.5em;
+}
+
+.details-container {
+  border: 1px solid #F0FFFE;
+  padding: 3rem;
+  font-family: font1;
+  border-bottom: #3B4547 solid 1px;
+  color: #23474C;
+
+}
+
+.details-container[open] {
+  background-color: #F0FFFE;
+}
+
+.summary-content {
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+.svg-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.hidden-svg {
+  display: none;
+}
+
+.plus {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.details-p{
+  margin-top: 1em;
+  padding-left: 4.4em;
+  padding-right: 4em;
+  font-family: font2;
 }
